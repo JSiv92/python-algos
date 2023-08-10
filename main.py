@@ -4,9 +4,10 @@
 from colorama import just_fix_windows_console
 # logo/program title
 from frontend.printTitle import print_title
-#green italics
-from frontend.greenItalic import green_italic
-
+#print func with green italics
+from frontend.greenItalic import print_green_italic
+#print func with red text
+from frontend.redText import print_red
 
 import sys, time
 
@@ -23,7 +24,7 @@ def main():
 
 #USER INPUT MENU
 
-    green_italic("Choose a DS: ")
+    print_green_italic("Choose a DS: ")
 
     print("0. Exit")
     print("1. Binary Tree")
@@ -31,7 +32,7 @@ def main():
     choice = input("Enter your choice (number): ")
 
     if choice == "0":
-        print("\033[91mExiting...\033[0m")
+        print_red("Exiting...")
         time.sleep(1)
         sys.exit()
 
@@ -44,9 +45,9 @@ def main():
         module.linked_list()
 
     else:
-        print("\033[91mInvalid choice\033[0m")
+        print_red("Invalid choice")
         time.sleep(1)
-        print("\033[91mReturning to main menu...\033[0m")
+        print_red("Returning to main menu...")
         time.sleep(1.5)
         main()
 
