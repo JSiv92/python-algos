@@ -1,6 +1,6 @@
 import main
 
-def binaryTree():
+def binary_tree():
     print("Binary Tree")
     
     choice = input("Do you want to return to the main menu? (y/n): ")
