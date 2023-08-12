@@ -1,6 +1,6 @@
 import main, sys, time
 #print func with red text
-from frontend.redText import print_red
+import frontend.textStyles as textStyle
 
 def go_to_home():
     # ask if return to main menu or shutdown
@@ -9,6 +9,6 @@ def go_to_home():
     if choice.lower() == 'y':
         main.main()  # Call the main() function from the main module to return to the main menu
     else:
-        print_red("Exiting...")
-        time.sleep(1)
+        textStyle.print_red("Exiting...")
+        time.sleep(0.5)
         sys.exit()  

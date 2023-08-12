@@ -2,12 +2,11 @@
 
 # using Colorama to get ANSI escapes to work on Windows
 from colorama import just_fix_windows_console
-# logo/program title
-from frontend.printTitle import print_title
-#print func with green italics
-from frontend.greenItalic import print_green_italic
-#print func with red text
-from frontend.redText import print_red
+
+# import textStyles module from frontend folder -
+# to access funcs for changing text style/colors
+import frontend.textStyles as textStyle
+
 
 import sys, time
 
@@ -19,12 +18,12 @@ def main():
     just_fix_windows_console()    
 
     #title
-    print_title()
+    textStyle.print_title()
 
 
 #USER INPUT MENU
 
-    print_green_italic("Choose a DS: ")
+    textStyle.print_green_italic("Choose a DS: ")
 
     print("0. Exit")
     print("1. Binary Tree")
@@ -32,7 +31,7 @@ def main():
     choice = input("Enter your choice (number): ")
 
     if choice == "0":
-        print_red("Exiting...")
+        textStyle.print_red("Exiting...")
         time.sleep(1)
         sys.exit()
 
@@ -45,9 +44,9 @@ def main():
         module.linked_list()
 
     else:
-        print_red("Invalid choice")
+        textStyle.print_red("Invalid choice")
         time.sleep(1)
-        print_red("Returning to main menu...")
+        textStyle.print_red("Returning to main menu...")
         time.sleep(1.5)
         main()
 
