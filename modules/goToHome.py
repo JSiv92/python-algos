@@ -1,5 +1,5 @@
 import main, sys, time
-#print func with red text
+#import frontend module
 import frontend.textStyles as textStyle
 
 def go_to_home():
