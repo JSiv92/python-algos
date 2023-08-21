@@ -41,7 +41,7 @@ def main():
 
     elif choice == "2":
         import modules.selectionSort as module
-        module.print_selection_sort()
+        module.selection_sort()
 
     else:
         textStyle.print_red("Invalid choice")
