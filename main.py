@@ -7,7 +7,7 @@ from colorama import just_fix_windows_console
 # to access funcs for changing text style/colors
 import frontend.textStyles as textStyle
 
-
+# sys to enable exit func, time to enable sleep func
 import sys, time
 
 
@@ -27,7 +27,7 @@ def main():
 
     print("0. Exit")
     print("1. Binary Tree")
-    print("2. Linked List")
+    print("2. Selection Sort")
     choice = input("Enter your choice (number): ")
 
     if choice == "0":
@@ -40,8 +40,8 @@ def main():
         module.binary_tree()
 
     elif choice == "2":
-        import modules.linkedList as module
-        module.linked_list()
+        import modules.selectionSort as module
+        module.print_selection_sort()
 
     else:
         textStyle.print_red("Invalid choice")

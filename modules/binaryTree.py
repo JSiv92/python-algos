@@ -1,11 +1,11 @@
 # BINARY SEARCH FUNCTION
-# Initialised a sorted array for testing
-# User inputs an element to search for
-# Prints the element and index or a not found message
+# initialises a sorted array
+# user inputs an element to search for
+# print the element and index or a not found message
 
 # function to return to main.py
 import modules.goToHome as  home
-#import frontend module
+# import frontend module
 import frontend.textStyles as textStyle
 
 # binary search logic
@@ -19,7 +19,7 @@ def binary_search(sorted_array, item):
 
         if guess == item:
             return f"{item} is located at [{mid}]"
-        if guess > item:
+        elif guess > item:
             high = mid - 1
         else:
             low = mid + 1
@@ -42,7 +42,7 @@ def binary_tree():
     #ask user to return to home
     home.go_to_home()
 
-# Call the binary_tree function if this script is run directly
+# call the binary_tree function if this script is run directly
 if __name__ == "__main__":
     binary_tree()
 
